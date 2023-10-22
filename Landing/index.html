@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  type="text/css" rel="stylesheet" href="style.css">
-    <title>Workshop</title>
+    <title>Studio Nimbus</title>
 </head>
-<body>
-    <nav>
-        <img src="" alt="Logo">
-        <h1 id="title">Workshop</h1>
-        <select name="landingMenu" id="menu" class="page">
-            <option value="home" class="page"><a href="">Home</a></option>
-            <option value="projects" class="page"><a href="">Projects</a></option>
-            <option value="future" class="page"><a href="">Future</a></option>
-        </select>
+<body class="lightMode">
+    <nav class="reverse lightMode">
+        <img src="\Imgs\SNlogo.png" alt="Logo" id="logo">
+        <h1 id="title">Studio Nimbus</h1>
+        <div id="colorModeContainer">
+            <div id="colorModeBack" class="lightMode"></div>
+            <button onclick="landingPage.colorModeChange()" id="colorModeButton" class="lightMode reverse"></button>
+        </div>
     </nav>
     <main>
-        <div id="main">
+        <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus vitae dicta assumenda fugit provident architecto quaerat tempore, nisi ipsam aspernatur, corporis modi ipsa eius maxime?</p>
         </div>
     </main>
@@ -27,3 +26,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
