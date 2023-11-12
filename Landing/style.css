@@ -73,5 +73,32 @@ nav {
     z-index: 2;
 }
 
+#projectArea {
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
 
+#projectArea.lightMode, .projectImg.lightMode {
+    border: 2px solid #494874;
+}
+
+#projectArea.darkMode, .projectImg.darkMode {
+    border: 2px solid #b3b3b3;
+}
+
+.projectImg {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.projectImg:hover {
+    width: 245px;
+    height: 245px;
+    border-color: #22ece2;
+    box-shadow: 0 0 5px #22ece2;
+    padding: 2.5px;
+}
 

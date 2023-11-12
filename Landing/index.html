@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  type="text/css" rel="stylesheet" href="style.css">
-    <title>Studio Nimbus</title>
-</head>
-<body class="lightMode">
-    <nav class="reverse lightMode">
-        <img src="\Imgs\Logos\SNlogoVector.png" alt="Logo" id="logo">
-        <h1 id="title">Studio Nimbus</h1>
-        <div id="colorModeContainer">
-            <div id="colorModeBack" class="lightMode"></div>
-            <button onclick="landingPage.colorModeChange()" id="colorModeButton" class="lightMode reverse"></button>
-        </div>
-    </nav>
-    <main>
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus vitae dicta assumenda fugit provident architecto quaerat tempore, nisi ipsam aspernatur, corporis modi ipsa eius maxime?</p>
-        </div>
-    </main>
-    <footer>
-        <p>Workshop</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link  type="text/css" rel="stylesheet" href="style.css">
+        <title>Studio Nimbus</title>
+    </head>
+    <body>
+        <nav class="reverse">
+            <img src="\Imgs\Logos\SNlogoVector.png" alt="Logo" id="logo" class="reverse">
+            <h1 id="title" class="reverse">Studio Nimbus</h1>
+            <div id="colorModeContainer" class="reverse">
+                <div id="colorModeBack"></div>
+                <button onclick="landingPage.changeColorMode()" id="colorModeButton" class="reverse"></button>
+            </div>
+        </nav>
+        <main>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus vitae dicta assumenda fugit provident architecto quaerat tempore, nisi ipsam aspernatur, corporis modi ipsa eius maxime?</p>
+            </div>
+            <div id="projectArea"></div>
+        </main>
+        <footer>
+            <p>Workshop</p>
+        </footer>
+        <script src="script.js"></script>
+        <script>
+            window.onload = function() {
+                projectSpace.displayProjects();
+                landingPage.loadColorMode();
+            }
+        </script>
+    </body>
 </html>
 

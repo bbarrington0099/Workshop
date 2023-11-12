@@ -1,14 +1,14 @@
 // Check if there is a saved state in local storage
-if (localStorage.getItem("pageState")) {
+if (localStorage.getItem("primeCheckerPageState")) {
   // If there is a saved state, retrieve it and set it as the page content
-  const savedState = localStorage.getItem("pageState");
+  const savedState = localStorage.getItem("primeCheckerPageState");
   document.body.innerHTML = savedState;
 }
 
 // Save the current page state to local storage on page unload
 window.addEventListener("beforeunload", function() {
   const pageState = document.body.innerHTML;
-  localStorage.setItem("pageState", pageState);
+  localStorage.setItem("primeCheckerPageState", pageState);
 });
 
 let listArea = document.getElementById('listArea');
