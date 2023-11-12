@@ -142,3 +142,10 @@ const button = () => {
     listArea.style.display = 'block'
   };
 };
+
+/*
+TO-DO:
+  optimize the code (OOP)
+  fix browser saving to save all fields
+  document better
+*/

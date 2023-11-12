@@ -47,3 +47,10 @@ let addSteps = (amount) => {
         `;
     }
 }
+
+/*
+TO-DO:
+    document the code
+    add option to change step amount
+    add area to change each step text or image?
+*/

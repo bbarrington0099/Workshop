@@ -100,3 +100,8 @@ panels.forEach((panel, index) => {
     })
 });
 
+/*
+TO-DO: 
+    document the code
+    add save state to browser cache of if rouge or hero and which village is selected
+*/
