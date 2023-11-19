@@ -7,17 +7,17 @@ const landingPage = {
         //refresh the collections of elements to be changed
         this.darkModeElements = document.querySelectorAll('.darkMode');
         this.lightModeElements = document.querySelectorAll('.lightMode');
-
+        //change the color mode of the page
         if (landingPage.colorModeButton.classList.contains('lightMode')) {
             this.lightModeElements.forEach(element => {
-                element.classList.remove('lightMode');
-                element.classList.add('darkMode');
+                element.classList.toggle('lightMode');
+                element.classList.toggle('darkMode');
             });
             this.colorModeButton.style.right = '-13px';
         } else if (this.colorModeButton.classList.contains('darkMode')) {
             this.darkModeElements.forEach(element => {
-                element.classList.remove('darkMode');
-                element.classList.add('lightMode');
+                element.classList.toggle('darkMode');
+                element.classList.toggle('lightMode');
             });
             this.colorModeButton.style.right = '13px';
         };
@@ -36,12 +36,14 @@ const landingPage = {
             this.allElements.forEach(element => {
                 element.classList.add(savedState.colorMode);
             });
+        //if no color state is saved, set the color mode to light mode
         } else {
             this.allElements.forEach(elm => {
                 elm.classList.add('lightMode');
             });
         };
     },
+    //initialize the page by displaying projects and loading color mode from browser cache
     initializePage : function() {
         projectSpace.displayProjects();
         this.loadColorMode();
@@ -51,6 +53,7 @@ const landingPage = {
 const projectSpace = {
     projectArea : document.querySelector('#projectArea'),
     projectArray : [],
+    //add a project to the project array
     addProject : function(project, projectDescription) {
         this.projectArray.push({
             projectName : project,
@@ -59,20 +62,21 @@ const projectSpace = {
             projectDescription : projectDescription,
         })
     },
+    //display all projects in the project array
     displayProjects : function() {
-        this.projectArray.forEach(project => {
-            this.projectArea.innerHTML += `
-            <div id="${project.projectName}" class="project">
+        this.projectArea.innerHTML = this.projectArray.map(project => {
+            return (
+            `<div id="${project.projectName}" class="project">
                 <a href="${project.projectLocation}" target="_blank">
                     <img src="${project.imgLocation}" alt="${project.projectDescription}" class="projectImg">
                 </a>
-            </div>
-            `;
-        });
+            </div>`)
+        }).join('');
         landingPage.allElements = document.querySelectorAll('*');
     },
 };
 
+//list which projects to display and their descriptions
 projectSpace.addProject('StepTracker', 'a step tracker made to experiment with basic CSS and JS');
 projectSpace.addProject('PrimeChecker', 'a tool for working with prime numbers');
 projectSpace.addProject('HiddenVillageCards', 'expandable cards that give information about the hidden villages in the Naruto Universe');
@@ -80,11 +84,9 @@ projectSpace.addProject('HiddenVillageCards', 'expandable cards that give inform
 /*
 TO-DO:
     add project description to tooltip?
-    change use of innerHTML to createElement/appendChild?
     change lorem ipsum to introduction
     add contact info to footer (host Mailserver)
-    create studio Github account
+    create studio Github account?
     add github link to footer
     host on apache VPS (host Webserver)
-    FONTS - Siracha? - https://fonts.google.com/specimen/Sriracha?query=sriracha 
 */

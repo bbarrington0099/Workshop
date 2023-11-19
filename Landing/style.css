@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
 } 
 
 body {
+    font-family: 'Sriracha';
     display: flex;
     flex-direction: column;
     transition-timing-function: ease;
