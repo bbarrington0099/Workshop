@@ -1,51 +1,46 @@
 const landingPage = {
     allElements : (document.querySelectorAll('*')),
-    lightModeElements: document.querySelectorAll('.lightMode'),
-    darkModeElements: document.querySelectorAll('.darkMode'),
     colorModeButton: document.querySelector('#colorModeButton'),
+    //toggle the color mode of the page when the color mode button is clicked
     changeColorMode: function() {
-        //refresh the collections of elements to be changed
-        this.darkModeElements = document.querySelectorAll('.darkMode');
-        this.lightModeElements = document.querySelectorAll('.lightMode');
         //change the color mode of the page
-        if (landingPage.colorModeButton.classList.contains('lightMode')) {
-            this.lightModeElements.forEach(element => {
-                element.classList.toggle('lightMode');
-                element.classList.toggle('darkMode');
-            });
+        if (this.colorModeButton.classList.contains('lightMode')) {
             this.colorModeButton.style.right = '-13px';
         } else if (this.colorModeButton.classList.contains('darkMode')) {
-            this.darkModeElements.forEach(element => {
-                element.classList.toggle('darkMode');
-                element.classList.toggle('lightMode');
-            });
             this.colorModeButton.style.right = '13px';
         };
+        //toggle the color mode of all elements on the page
+        this.allElements.forEach(element => {
+            element.classList.toggle('lightMode');
+            element.classList.toggle('darkMode');
+        });
         //save the current color state of the page to browser cache
         const pageState = {
-            colorMode: landingPage.colorModeButton.classList[1],
-            buttonPosition: landingPage.colorModeButton.style.right,
+            colorMode: this.colorModeButton.classList[1],
+            buttonPosition: this.colorModeButton.style.right,
         };
         localStorage.setItem("landingPageColorMode", JSON.stringify(pageState));
     },
+    //load the color mode of the page from browser cache or set it to light mode if no color state is saved
     loadColorMode : function() {
         //load the saved color state of the page from browser cache
         if (localStorage.getItem("landingPageColorMode")) {
             const savedState = JSON.parse(localStorage.getItem("landingPageColorMode"));
             this.colorModeButton.style.right = savedState.buttonPosition;
             this.allElements.forEach(element => {
-                element.classList.add(savedState.colorMode);
+                element.classList.toggle(savedState.colorMode);
             });
         //if no color state is saved, set the color mode to light mode
         } else {
             this.allElements.forEach(elm => {
-                elm.classList.add('lightMode');
+                elm.classList.toggle('lightMode');
             });
         };
     },
     //initialize the page by displaying projects and loading color mode from browser cache
     initializePage : function() {
         projectSpace.displayProjects();
+        this.allElements = document.querySelectorAll('*');
         this.loadColorMode();
     }
 };
@@ -72,7 +67,6 @@ const projectSpace = {
                 </a>
             </div>`)
         }).join('');
-        landingPage.allElements = document.querySelectorAll('*');
     },
 };
 

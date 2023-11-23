@@ -55,16 +55,6 @@ nav {
     border: none;
 }
 
-.reverse.lightMode {
-    background-color: #494874;
-    color: #b3b3b3;
-}
-
-.reverse.darkMode {
-    background-color: #b3b3b3;
-    color: #494874;
-}
-
 #colorModeButton {
     width: 40px;
     height: 40px;
@@ -76,10 +66,21 @@ nav {
     z-index: 2;
 }
 
+.reverse.lightMode {
+    background-color: #494874;
+    color: #b3b3b3;
+}
+
+.reverse.darkMode {
+    background-color: #b3b3b3;
+    color: #494874;
+}
+
 #projectArea {
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
+    margin: 1rem;
 }
 
 #projectArea.lightMode, .projectImg.lightMode {
