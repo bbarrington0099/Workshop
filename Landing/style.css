@@ -106,3 +106,15 @@ nav {
     padding: 2.5px;
 }
 
+main div p {
+    padding: 5px;
+    text-align: justify;
+}
+
+@media (max-width: 900px) {
+    #projectArea {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    }
+}
