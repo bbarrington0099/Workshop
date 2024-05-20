@@ -32,30 +32,30 @@ function changeBand() {
         buttonState.innerHTML = "Protect The Village";
         starterTitle.innerHTML = "Akatsuki";
         starterBody.innerHTML = "Akatsuki (<a href='https://naruto.fandom.com/wiki/Akatsuki' target='_blank'>暁</a>, literally meaning: 'Dawn' or 'Daybreak') was a group of shinobi that existed outside the usual system of hidden villages. Over the course of several decades, Akatsuki took different forms and was led by different individuals. Though each iteration is viewed as either subversives or criminals, all seek to make the world a better place through their own means. Each Akatsuki tended to have multiple lairs across the world, inaccessible either due to their remoteness or the various security measures that protected them."
-        ASFBand.style.backgroundImage = "url('img/AlliedShinobiForcesR.png')";
-        LeBand.style.backgroundImage = "url('img/LeafR.png')";
-        SoBand.style.backgroundImage = "url('img/SoundR.png')";
-        GrBand.style.backgroundImage = "url('img/GrassR.png')";
-        StBand.style.backgroundImage = "url('img/StoneR.png')";
-        ClBand.style.backgroundImage = "url('img/CloudR.png')";
-        SaBand.style.backgroundImage = "url('img/SandR.png')";
-        MiBand.style.backgroundImage = "url('img/MistR.png')";
-        RaBand.style.backgroundImage = "url('img/RainR.png')";
-        WaBand.style.backgroundImage = "url('img/WaterfallR.png')";
+        ASFBand.style.backgroundImage = "url('img/alliedShinobiForcesR.png')";
+        LeBand.style.backgroundImage = "url('img/leafR.png')";
+        SoBand.style.backgroundImage = "url('img/soundR.png')";
+        GrBand.style.backgroundImage = "url('img/grassR.png')";
+        StBand.style.backgroundImage = "url('img/stoneR.png')";
+        ClBand.style.backgroundImage = "url('img/cloudR.png')";
+        SaBand.style.backgroundImage = "url('img/sandR.png')";
+        MiBand.style.backgroundImage = "url('img/mistR.png')";
+        RaBand.style.backgroundImage = "url('img/rainR.png')";
+        WaBand.style.backgroundImage = "url('img/waterfallR.png')";
     } else if (buttonState.innerHTML === "Protect The Village") {
         buttonState.innerHTML = "Go Rogue";
         starterTitle.innerHTML = "Allied Shinobi Forces";
         starterBody.innerHTML = "The Allied Shinobi Forces (<a href='https://naruto.fandom.com/wiki/Allied_Shinobi_Forces' target='_blank'>忍連合軍</a>, Shinobi Rengōgun) was a coalition between the collective military might of the shinobi nations of the Lands of Lightning, Water, Earth, Wind, and Fire, and the lone samurai nation of the Land of Iron."
-        ASFBand.style.backgroundImage = "url('img/AlliedShinobiForces.png')";
-        LeBand.style.backgroundImage = "url('img/Leaf.png')";
-        SoBand.style.backgroundImage = "url('img/Sound.png')";
-        GrBand.style.backgroundImage = "url('img/Grass.png')";
-        StBand.style.backgroundImage = "url('img/Stone.png')";
-        ClBand.style.backgroundImage = "url('img/Cloud.png')";
-        SaBand.style.backgroundImage = "url('img/Sand.png')";
-        MiBand.style.backgroundImage = "url('img/Mist.png')";
-        RaBand.style.backgroundImage = "url('img/Rain.png')";
-        WaBand.style.backgroundImage = "url('img/Waterfall.png')";
+        ASFBand.style.backgroundImage = "url('img/alliedShinobiForces.png')";
+        LeBand.style.backgroundImage = "url('img/leaf.png')";
+        SoBand.style.backgroundImage = "url('img/sound.png')";
+        GrBand.style.backgroundImage = "url('img/grass.png')";
+        StBand.style.backgroundImage = "url('img/stone.png')";
+        ClBand.style.backgroundImage = "url('img/cloud.png')";
+        SaBand.style.backgroundImage = "url('img/sand.png')";
+        MiBand.style.backgroundImage = "url('img/mist.png')";
+        RaBand.style.backgroundImage = "url('img/rain.png')";
+        WaBand.style.backgroundImage = "url('img/waterfall.png')";
     }
 }
 
