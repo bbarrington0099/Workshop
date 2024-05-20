@@ -22,7 +22,7 @@ const landingPage = {
         localStorage.setItem("landingPageColorMode", JSON.stringify(pageState));
     },
     //load the color mode of the page from browser cache or set it to light mode if no color state is saved
-    loadColorMode : function() {
+    loadColorMode: function() {
         //load the saved color state of the page from browser cache
         if (localStorage.getItem("landingPageColorMode")) {
             const savedState = JSON.parse(localStorage.getItem("landingPageColorMode"));
@@ -38,7 +38,7 @@ const landingPage = {
         };
     },
     //initialize the page by displaying projects and loading color mode from browser cache
-    initializePage : function() {
+    initializePage: function() {
         projectSpace.displayProjects();
         this.allElements = document.querySelectorAll('*');
         this.loadColorMode();
@@ -74,6 +74,7 @@ const projectSpace = {
 projectSpace.addProject('StepTracker', 'a step tracker made to experiment with basic CSS and JS');
 projectSpace.addProject('PrimeChecker', 'a tool for working with prime numbers');
 projectSpace.addProject('HiddenVillageCards', 'expandable cards that give information about the hidden villages in the Naruto Universe');
+projectSpace.addProject('RPG', 'a text-based RPG game');
 
 /*
 TO-DO:
