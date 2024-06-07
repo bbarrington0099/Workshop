@@ -2,7 +2,7 @@ const books = document.getElementById('books');
 const scripture = document.getElementById('scripture');
 
 const rootUrl = 'https://api.scripture.api.bible/v1/bibles';
-const apiKey= '371751d0e19a50850be87d5fb8b7bf44';
+const apiKey= 'b56939cb9bf87821bb6fa14c127becf2';
 const bibleId = 'de4e12af7f28f599-02';
 
 const chapterArray = [];
@@ -112,7 +112,7 @@ const getBooks = async () => {
                 books.appendChild(new Book(book.name, book.chapters).createBook());
             }
         })
-        .catch(error => books.innerHTML = `Error: ${error}`);
+        .catch(error => books.innerHTML = `${error}`);
 };
 
 const showVerses = async (chapterId) => {

@@ -137,6 +137,7 @@ button:disabled {
     position: relative;
     background-color: lightgray;
     color: gray;
+    border-color: black;
 }
 
 button:disabled:hover::after {

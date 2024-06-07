@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 html, body {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 } 
@@ -76,27 +77,40 @@ nav {
     color: #494874;
 }
 
+#bio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bio {
+    text-align: center;
+}
+
 #projectArea {
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
     margin: 1rem;
+    flex-wrap: wrap;
 }
 
-#projectArea.lightMode, .projectImg.lightMode, .project.lightMode {
+#projectArea.lightMode, .projectImg.lightMode, .project.lightMode, .sourceLink {
     border: 2px solid #494874;
 }
 
-#projectArea.darkMode, .projectImg.darkMode, .project.darkMode {
+#projectArea.darkMode, .projectImg.darkMode, .project.darkMode, .sourceLink {
     border: 2px solid #b3b3b3;
 }
 
 .project {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
-    border-radius: 5px;
-    margin: 1rem
+    padding: .5rem;
+    border-radius: 10px;
+    margin: 1rem;
 }
 
 .projectImg {
@@ -114,15 +128,39 @@ nav {
     padding: 2.5px;
 }
 
+.projectHighlights {
+    text-align: center;
+}
+
 main div p {
     padding: 5px;
     text-align: justify;
 }
 
+.sourceLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: .5rem;
+    border-radius: 10px;
+    height: 1rem;
+    width: 7rem;
+}
+
+.sourceLink:hover {
+    border-color: #22ece2;
+    box-shadow: 0 0 5px #22ece2;
+}
+
 @media (max-width: 900px) {
     #projectArea {
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project {
+        width: 300px;
     }
 }

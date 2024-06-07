@@ -49,14 +49,15 @@ const projectSpace = {
     projectArea : document.querySelector('#projectArea'),
     projectArray : [],
     //add a project to the project array
-    addProject : function(project, projectDescription, githubLink, highlights) {
+    addProject : function(project, projectDescription, highlights, properName) {
         this.projectArray.push({
             projectName : project,
             projectLocation : `..\\Projects\\${project}\\index.html`,
             imgLocation : `..\\Imgs\\Projects\\${project}.png`,
             projectDescription : projectDescription,
-            githubLink : githubLink,
-            highlights : highlights
+            githubLink : `https://github.com/bbarrington0099/Workshop/tree/main/Projects/${project}`,
+            highlights : highlights,
+            properName : properName
         })
     },
     //display all projects in the project array
@@ -64,21 +65,22 @@ const projectSpace = {
         this.projectArea.innerHTML = this.projectArray.map(project => {
             return (
             `<div id="${project.projectName}" class="project">
+                <h2>${project.properName ? project.properName : project.projectName}</h2>
                 <a href="${project.projectLocation}" target="_blank">
                     <img src="${project.imgLocation}" alt="${project.projectDescription}" class="projectImg">
                 </a>
                 <p class="projectHighlights">${project.highlights}</p>
-                <a href="${project.githubLink}" target="_blank">Source Code</a>
+                <a class="sourceLink" href="${project.githubLink}" target="_blank">Source Code</a>
             </div>`)
         }).join('');
     },
 };
 
 //list which projects to display and their descriptions
-projectSpace.addProject('StepTracker', 'a step tracker made to experiment with basic CSS and JS');
 projectSpace.addProject('PrimeChecker', 'a tool for working with prime numbers');
 projectSpace.addProject('HiddenVillageCards', 'expandable cards that give information about the hidden villages in the Naruto Universe');
 projectSpace.addProject('RPG', 'a text-based RPG game');
+projectSpace.addProject('Bible', 'the KJV of The Holy Bible', 'Using Fetch for API calls and parsing the data to be used in the DOM', 'The Holy Bible (KJV)')
 
 /*
 TO-DO:
