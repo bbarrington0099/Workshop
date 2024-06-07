@@ -49,12 +49,14 @@ const projectSpace = {
     projectArea : document.querySelector('#projectArea'),
     projectArray : [],
     //add a project to the project array
-    addProject : function(project, projectDescription) {
+    addProject : function(project, projectDescription, githubLink, highlights) {
         this.projectArray.push({
             projectName : project,
             projectLocation : `..\\Projects\\${project}\\index.html`,
             imgLocation : `..\\Imgs\\Projects\\${project}.png`,
             projectDescription : projectDescription,
+            githubLink : githubLink,
+            highlights : highlights
         })
     },
     //display all projects in the project array
@@ -65,6 +67,8 @@ const projectSpace = {
                 <a href="${project.projectLocation}" target="_blank">
                     <img src="${project.imgLocation}" alt="${project.projectDescription}" class="projectImg">
                 </a>
+                <p class="projectHighlights">${project.highlights}</p>
+                <a href="${project.githubLink}" target="_blank">Source Code</a>
             </div>`)
         }).join('');
     },

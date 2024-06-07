@@ -83,12 +83,20 @@ nav {
     margin: 1rem;
 }
 
-#projectArea.lightMode, .projectImg.lightMode {
+#projectArea.lightMode, .projectImg.lightMode, .project.lightMode {
     border: 2px solid #494874;
 }
 
-#projectArea.darkMode, .projectImg.darkMode {
+#projectArea.darkMode, .projectImg.darkMode, .project.darkMode {
     border: 2px solid #b3b3b3;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin: 1rem
 }
 
 .projectImg {
