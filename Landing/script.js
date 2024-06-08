@@ -86,8 +86,8 @@ projectSpace.addProject('MovieApp', 'a movie searching application', 'Utilizing 
 projectSpace.addProject('NotesApp', 'an app for keeping and editing notes', 'Learning to save and pull from Local Storage and utilizing live user input');
 projectSpace.addProject('Pong', `a clone of the classic game, 'Pong'`, 'Importing Modules and using ClientRect() to create and move Objects');
 projectSpace.addProject('Snake', `a clone of the classic game, 'Snake'`, 'Taking User Input to move an object on a grid and give feedback based on actions');
-projectSpace.addProject('PasswordGenerator', 'a random password generator with options', 'Reading selected options to output data within the desired parameters');
-projectSpace.addProject('LiveUserFilter', 'a searchable user database', 'Pulling random users from a Database to create a filterable UI');
+projectSpace.addProject('PasswordGenerator', 'a random password generator with options', 'Reading selected options to output data within the desired parameters', 'Password Generator');
+projectSpace.addProject('LiveUserFilter', 'a searchable user database', 'Pulling random users from a Database to create a filterable UI', 'User Searchbase');
 
 /*
 TO-DO:
