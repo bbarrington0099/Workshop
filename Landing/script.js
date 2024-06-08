@@ -77,17 +77,19 @@ const projectSpace = {
 };
 
 //list which projects to display and their descriptions
-projectSpace.addProject('PrimeChecker', 'a tool for working with prime numbers');
-projectSpace.addProject('HiddenVillageCards', 'expandable cards that give information about the hidden villages in the Naruto Universe');
-projectSpace.addProject('RPG', 'a text-based RPG game');
-projectSpace.addProject('Bible', 'the KJV of The Holy Bible', 'Using Fetch for API calls and parsing the data to be used in the DOM', 'The Holy Bible (KJV)')
+projectSpace.addProject('Bible', 'the KJV of The Holy Bible', 'My most recent project, focusing on using Classes when parsing data gathered with Fetch()', 'The Holy Bible (KJV)')
+projectSpace.addProject('PrimeChecker', 'a tool for working with prime numbers', 'My first project, working with DOM manipulation and gathering user data', 'Prime Number Tool');
+projectSpace.addProject('HiddenVillageCards', 'expandable cards that give information about the hidden villages in the Naruto Universe', 'An early project, emphasizing on working with dynamic CSS', 'Dynamic Naruto Cards');
+projectSpace.addProject('RPG', 'a text-based RPG game', 'A Text Based RPG using Objects to change the DOM based on User Interaction', 'Dragon Repeller');
+projectSpace.addProject('DrawingApp', 'a paint like drawing app', `A 'Paint' like drawing app to familiarize myself with the basics of Canvas`, 'Drawing App');
+projectSpace.addProject('MovieApp', 'a movie searching application', 'Utilizing Fetch() to list Movies in a searchable display', 'Movie Searchbase');
+projectSpace.addProject('NotesApp', 'an app for keeping and editing notes', 'Learning to save and pull from Local Storage and utilizing live user input');
+projectSpace.addProject('Pong', `a clone of the classic game, 'Pong'`, 'Importing Modules and using ClientRect() to create and move Objects');
+projectSpace.addProject('Snake', `a clone of the classic game, 'Snake'`, 'Taking User Input to move an object on a grid and give feedback based on actions');
+projectSpace.addProject('PasswordGenerator', 'a random password generator with options', 'Reading selected options to output data within the desired parameters');
+projectSpace.addProject('LiveUserFilter', 'a searchable user database', 'Pulling random users from a Database to create a filterable UI');
 
 /*
 TO-DO:
-    add project description to tooltip?
     change lorem ipsum to introduction
-    add contact info to footer (host Mailserver)
-    create studio Github account?
-    add github link to footer
-    host on apache VPS (host Webserver)
 */

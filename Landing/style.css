@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
+:root {
+    --primary-color: #494874;
+    --secondary-color: #b3b3b3;
+    --tertiary-color: #22ece2;
+}
+
 html, body {
     box-sizing: border-box;
     margin: 0;
@@ -15,13 +21,13 @@ body {
 }
 
 .darkMode {
-    background-color: #494874;
-    color: #b3b3b3;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .lightMode {
-    background-color: #b3b3b3;
-    color: #494874;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 nav {
@@ -68,22 +74,28 @@ nav {
 }
 
 .reverse.lightMode {
-    background-color: #494874;
-    color: #b3b3b3;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .reverse.darkMode {
-    background-color: #b3b3b3;
-    color: #494874;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-#bio-container {
+#container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+summary {
+    font-size: 2rem;
+}
+
 #bio {
+    padding: 0px 5rem;
     text-align: center;
 }
 
@@ -95,15 +107,16 @@ nav {
     flex-wrap: wrap;
 }
 
-#projectArea.lightMode, .projectImg.lightMode, .project.lightMode, .sourceLink {
-    border: 2px solid #494874;
+#projectArea.lightMode, .projectImg.lightMode, .project.lightMode, .sourceLink.lightMode {
+    border: 2px solid var(--primary-color);
 }
 
-#projectArea.darkMode, .projectImg.darkMode, .project.darkMode, .sourceLink {
-    border: 2px solid #b3b3b3;
+#projectArea.darkMode, .projectImg.darkMode, .project.darkMode, .sourceLink.darkMode {
+    border: 2px solid var(--secondary-color);
 }
 
 .project {
+    position: relative;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -123,8 +136,8 @@ nav {
 .projectImg:hover {
     width: 245px;
     height: 245px;
-    border-color: #22ece2;
-    box-shadow: 0 0 5px #22ece2;
+    border-color: var(--tertiary-color);
+    box-shadow: 0 0 5px var(--tertiary-color);
     padding: 2.5px;
 }
 
@@ -149,8 +162,18 @@ main div p {
 }
 
 .sourceLink:hover {
-    border-color: #22ece2;
-    box-shadow: 0 0 5px #22ece2;
+    border-color: var(--tertiary-color);
+    box-shadow: 0 0 5px var(--tertiary-color);
+}
+
+.sourceLink:hover.darkMode {
+    background-color: var(--secondary-color);
+    color: var(--primary-color)
+}
+
+.sourceLink:hover.lightMode {
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
 }
 
 @media (max-width: 900px) {
