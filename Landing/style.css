@@ -176,6 +176,11 @@ main div p {
     color: var(--secondary-color)
 }
 
+.mobileDisclaimer {
+    color: var(--tertiary-color);
+    text-decoration: underline;
+}
+
 @media (max-width: 900px) {
     #projectArea {
         flex-direction: column;
