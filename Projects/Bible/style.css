@@ -156,5 +156,17 @@ button:disabled:hover::after {
 @media (max-width: 600px) {
     #topTitle {
         font-size: 2rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    summary {
+        box-shadow: inset 2px -2px 5px rgba(0, 0, 0, 0.7);
+        width: 100%;
+        font-size: .75rem;
+    }
+
+    #books {
+        width: fit-content;
     }
 }

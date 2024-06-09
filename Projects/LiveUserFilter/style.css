@@ -92,3 +92,9 @@ body {
 .user-list li.hide {
     display: none;
 }
+
+@media (max-width: 600px) {
+    .container {
+        position: fixed;
+    }
+}

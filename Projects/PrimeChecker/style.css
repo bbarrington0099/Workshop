@@ -31,6 +31,7 @@ body {
   #toCheck {
     font-style: italic;
     border-radius: 45px;
+    max-width: 85%;
   }
   
   #range {
@@ -93,4 +94,10 @@ body {
     text-align: center;
     margin: 0;
     padding-top: 15px;
+  }
+
+  @media (max-width: 600px) {
+    .main {
+      min-height: 70vh;
+    }
   }
